@@ -1,0 +1,1 @@
+<span>{{ $name }}<br><img src="{{ asset('storage/uploads/companylogos/'.$company_logo) }}" class="img-fluid rounded-circle" style="max-width: 50px;"></span>

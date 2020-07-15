@@ -1,0 +1,57 @@
+extends _main2.pug
+
+block title
+	| Account Setup - PMS
+	
+block style
+
+block content
+	
+	.page-header.text-center.mb-3
+		h1.page-title Set Up Your Account 
+			
+		
+	.page-body
+		.content-box
+			
+			.setup-box
+				nav.setup-steps
+					a.setup-step-item.active(href='setup-step1.html')
+						.step-icon
+							i.fas.fa-cogs
+						.setup-title 1. PMS
+					a.setup-step-item(href='setup-step2.html')
+						.step-icon
+							i.fas.fa-home
+						.setup-title 2. Properties
+					a.setup-step-item(href='setup-step3.html')
+						.step-icon
+							i.fas.fa-hand-holding-usd
+						.setup-title 3. Payment Rules
+					a.setup-step-item(href='setup-step4.html')
+						.step-icon
+							i.fas.fa-credit-card
+						.setup-title 4. Payment Gateways
+				.setup-body
+					h4.setup-page-title Connect your Property Management System
+					form.pms-setup-form
+						.form-group
+							label Select PMS
+							select.custom-select.custom-select-sm
+								option(selected) BookingAutomation.com
+								option Something else
+								option Something else 2
+								option Booking System 3
+						.form-group
+							label API Key
+							input.form-control.form-control-sm(type='text' placeholder='Type API key')
+						.form-group
+							label Username
+							input.form-control.form-control-sm(type='text' placeholder='Your Username')
+				.setup-footer.d-flex.justify-content-center
+					a.btn.btn-success.px-md-4(href='setup-step2.html') Save and Continue 
+						i.fas.fa-arrow-right
+				
+				
+				
+block scripts

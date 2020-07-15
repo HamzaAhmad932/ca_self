@@ -1,0 +1,17 @@
+
+
+// Variables
+@import "variables";
+@import "~toastr/toastr.scss";
+@import "css/custom.css";
+@import "css/responsive.css";
+@import "css/v-tooltip.css";
+
+// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+

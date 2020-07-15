@@ -1,0 +1,29 @@
+.ct-horizontal {
+	display: none;
+}
+
+.ct-vertical {
+	stroke-dasharray: 0;
+	stroke: $gray-100;
+}
+
+.ct-vertical, .ct-horizontal {
+	color: $gray-500;
+	font-size: 11px;
+}
+
+.ct-point {
+	cursor: pointer;
+	transition: $transition;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.ct-label.ct-horizontal {
+	margin-left: -1rem;
+	padding-top: 4px;
+}
+
+
+

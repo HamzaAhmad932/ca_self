@@ -1,0 +1,107 @@
+extends _main3.pug
+
+block title
+	| Pre-Check-In - Complete Pre-Checkin
+	
+block style	
+
+block content
+	// Chat
+	+chat
+			
+
+	.guest-portal
+		+gp-header
+			
+		//Guest Portal
+		.gp-page
+			.gp-title
+				.language-select.dropdown.dropdown-sm
+					button#dropdownMenuButton.btn.btn-sm.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						span.flag-emoji 🇬🇧
+						|  English
+					.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton')
+						a.dropdown-item(href='#')
+							span.flag-emoji 🇫🇷
+							|  French
+						a.dropdown-item(href='#')
+							span.flag-emoji 🇪🇸
+							|  Spanish
+				h1.page-title Your Contract
+				p.text-muted Please check provided data and submit
+
+
+			.gp-box
+				.gp-box-steps
+					.gp-property
+						.gp-property-img
+							img(src='img/property.png' alt='')
+						.gp-property-legend
+							p.mb-0 Apartment with Sea View at walking 5mins from MyKhe Beach
+							.gp-property-dl.small
+								img(src='img/airbnb-logo.png' alt='')
+								span Booked with AirBNB
+								a.ml-auto(href='#' target='_blank')
+									span View online 
+									i.fas.fa-external-link-alt
+
+				.gp-box-content
+					.gp-inset
+						.row.mb-3
+							.col
+								+dl('Reference:', 'KT_859298')
+								+dl('Check-in date:', 'Jun 3, 2019')
+							.col
+								+dl('Amount:', '$5,200')
+								+dl('Check-out date:', 'Jun 9, 2019')
+									
+							.col-12
+								.form-section-title.mt-3
+									h4 Contact info
+									a.section-edit-link(href='#0') 
+										i.fas.fa-edit
+										|  Edit 
+							.col-12
+								+dl('Full name:','Olga Richards')
+								+dl('Email:','howell.forrest@durgan.co.uk')
+								+dl('Phone:','200-635-2579')
+								+dl('Guests:','3 (1 child)')
+								
+							.col-12
+								.form-section-title.mt-3
+									h4 Arrival
+									a.section-edit-link(href='#0') 
+										i.fas.fa-edit
+										|  Edit 
+							.col-12
+								+dl('Arriving to Paris by:', 'Flight number - KN 9490')
+								+dl('Estimated arrival time:', '12:40 pm')
+							.col-12
+								.form-section-title.mt-3
+									h4 ID Verification
+									a.section-edit-link(href='#0') 
+										i.fas.fa-edit
+										|  Edit 
+							.col-12
+								.verification-document
+									img(src='img/sample-document.png' alt='')
+										
+							.col-12
+								.form-section-title.mt-3
+									h4 Payment method
+									a.section-edit-link(href='#0') 
+										i.fas.fa-edit
+										|  Edit 
+							.col-12
+								+dl('Card number:', '4498 **** **** 1200')
+							.col-12.mt-3
+								.alert.alert-primary
+									| By clicking Complete Button you confirm that you agree with 
+									a(href='#0') LakeHillHost Terms and Conditions
+								
+
+			.gp-divider
+	.gp-footer
+		a.btn.btn-secondary.btn-back(href='pre-checkin-05.html')
+			i.fas.fa-arrow-left
+		a.btn.btn-success.btn-confirm(href='pre-checkin-07.html') Complete Pre-Check-In

@@ -1,0 +1,112 @@
+extends _main3.pug
+
+block title
+	| Guest App
+	
+block style	
+
+block content
+	// Chat
+	+chat
+			
+
+	.guest-portal.guest-app-page
+		+gp-header
+			
+		//Guest Portal
+		.gp-page
+			.gp-title
+				.language-select.dropdown.dropdown-sm
+					button#dropdownMenuButton.btn.btn-sm.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						span.flag-emoji 🇬🇧
+						|  English
+					.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton')
+						a.dropdown-item(href='#')
+							span.flag-emoji 🇫🇷
+							|  French
+						a.dropdown-item(href='#')
+							span.flag-emoji 🇪🇸
+							|  Spanish
+				h1.page-title Welcome Olga
+				p Booking dates: 
+					span.text-muted  Jan 12 - Jan 23, 2019
+
+
+			.gp-guest-app
+				.gp-box-steps
+					.gp-property
+						.gp-property-img
+							img(src='img/property.png' alt='')
+						.gp-property-legend
+							p.mb-0 Apartment with Sea View at walking 5mins from MyKhe Beach
+							.gp-property-dl.small
+								img(src='img/airbnb-logo.png' alt='')
+								span Booked with AirBNB
+								a.ml-auto(href='#' target='_blank')
+									span View online 
+									i.fas.fa-external-link-alt
+				
+				#guest-info.accordion.guest-app-collapse
+					.card
+						#headingOne.card-header
+							h4
+								a.collapsed(data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+									| Arrival Info
+									i.fas.fa-chevron-right
+						#collapseOne.collapse(aria-labelledby='headingOne', data-parent='#guest-info')
+							.card-body
+								.row
+									.col-12
+										.mapouter
+											.gmap_canvas
+												iframe#gmap_canvas(width='100%', height='240', src='https://maps.google.com/maps?q=da%20nang%20an%20thuong%2029%2C%2041&t=&z=16&ie=UTF8&iwloc=&output=embed', frameborder='0', scrolling='no', marginheight='0', marginwidth='0')
+									.col-12
+										h4 Address
+										p 363V+V8 Bắc Mỹ Phú, Ngũ Hành Sơn
+											br
+											| Da Nang, Vietnam
+									.col-12
+										hr
+										img.mb-2(src='img/img_01.png' alt='')
+										p Hotel street and entrance view.
+									.col-12
+										img.mb-2(src='img/img_02.png' alt='')
+										p Hotel building
+										
+
+
+					.card
+						#headingTwo.card-header
+							h4
+								a.collapsed(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='true', aria-controls='collapseTwo')
+									| Access Codes
+									i.fas.fa-chevron-right
+						#collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#guest-info')
+							.card-body
+								+dl('Apartment Access', 'Please, receive your access card at reception')
+								.form-group
+									label(for='minibarCode') Minibar Code
+									input#minibarCode.form-control(type='text', readonly='' value='859490')
+								.form-group
+									label(for='wifiPass') Wi-Fi Username and Password
+									input#wifiUser.form-control.mb-2(type='text', value='Novotel-Guest' readonly='')
+									.input-group
+										input#wifiPass.form-control(type='text', value='WelcomeHome' readonly='')
+										.input-group-append
+											a.btn.btn-primary.input-group-prepend(href='#0') 
+												| Copy Password
+					.card
+						#headingThree.card-header
+							h4
+								a.collapsed(data-toggle='collapse', data-target='#collapseThree', aria-expanded='true', aria-controls='collapseThree')
+									| Guest Handbook
+									i.fas.fa-chevron-right
+						#collapseThree.collapse(aria-labelledby='headingThree', data-parent='#guest-info')
+							.card-body
+								h4.mb-0 How to turn on hot water
+								p Use plug near bathroom
+								h4.mb-0 Is it allowed to smoke in apartment?
+								p No. 
+									span.text-danger Novotel is a non-smoking hotel. 
+									| You can smoke in front of our building or at our rooftop bar. We are open 24 hours.')
+

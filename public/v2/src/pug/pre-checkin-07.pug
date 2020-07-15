@@ -1,0 +1,22 @@
+extends _main3.pug
+
+block title
+	| Pre-Check-In - Complete Pre-Checkin
+	
+block style	
+
+block content
+	// Chat
+	+chat
+			
+
+	.guest-portal
+		+gp-header
+			
+		//Guest Portal
+		.gp-page
+			.precheckin-success
+				i.far.fa-check-circle.text-success.mb-3(style='font-size: 5rem;')
+				h3.text-success You successfully pre-checked-in
+				p.text-muted Thank you for your patience. Please follow the instrutions we emailed to you.
+								

@@ -1,0 +1,742 @@
+mixin footer
+	footer.footer.d-flex.align-items-center
+		.container
+			.row
+				.col.text-muted
+					| © 2019 - BookingAutomation 
+					span.ml-3 Need Help? 
+						a.text-dark(href='#0') Contact Us
+
+mixin header
+	header
+		.main-nav
+			nav.navbar.navbar-expand-lg.navbar-light.bg-white
+				a.navbar-brand(href='index.html')
+					img(src='img/logo.svg' alt='Booking Automation' width='40' height='40')
+				a.navbar-btn.navbar-toggler(role='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
+					i.fas.fa-bars
+				#navbarNavAltMarkup.collapse.navbar-collapse
+					.navbar-nav.ml-auto
+						block
+
+			
+		.header-action.ml-auto
+			a#menu-toggle.header-action-btn(href='#0')
+				i.fas.fa-bell
+				span.notification-badge 4
+			.dropdown.user-menu
+				a#dropdownMenuButton.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+					.user-avatar
+						img(src='img/user.png')
+					span.d-none.d-sm-block.d-md-block.d-lg-block Carl Goodwin
+				.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton')
+					a.dropdown-item(href='#') Action
+					a.dropdown-item(href='#') Another action
+					.dropdown-divider
+					a.dropdown-item(href='#') Log Out
+					
+mixin box-link
+	a.overlay-link(href='#0')
+	
+mixin sidebar
+	.notification-sidebar
+		.notification-list
+			.notification-widget
+				.widget-header.danger
+					h4.widget-title Action Required 
+					a.readmore(href='#0') View All (21) →
+				.widget-body
+				
+					.notification-item.danger
+						h5 Payment Declined
+						span.d-block Booking ID 9492
+						.notification-icon
+							i.fas.fa-exclamation-circle
+						.notification-time 15m ago
+						+box-link
+					
+					.notification-item.danger
+						h5 ID Missed
+						span.d-block Booking ID 9492
+						.notification-icon
+							i.fas.fa-exclamation-circle
+						.notification-time 15m ago
+						+box-link
+						
+					.notification-item.success
+						h5 Cleaning Paid
+						span.d-block Booking ID 9492
+						.notification-icon
+							i.fas.fa-check
+						.notification-time 15m ago
+						+box-link
+						
+					.notification-item.warning
+						h5 Payment Pending
+						span.d-block Booking ID 9492
+						.notification-icon
+							i.fas.fa-info-circle
+						.notification-time 15m ago
+						+box-link
+
+			.notification-widget
+				.widget-header.warning
+					h4.widget-title Recent Activity
+					a.readmore(href='#0') View All →
+				.widget-body.timeline
+				
+					.timeline-item.success
+						.timeline-icon
+							i.fas.fa-check
+						.timeline-item-content
+							.timeline-time 2h ago
+							.timeline-text
+								strong Thomas Horton 
+								|  approved 4 bookings
+						+box-link
+						
+					.timeline-item.success
+						.timeline-icon
+							i.fas.fa-credit-card
+						.timeline-item-content
+							.timeline-time 2h 30m ago
+							.timeline-text
+								strong Payment received 
+								|  for ‘ID-84821’
+						+box-link
+						
+					.timeline-item.danger
+						.timeline-icon
+							i.fas.fa-credit-card
+						.timeline-item-content
+							.timeline-time 2h 30m ago
+							.timeline-text
+								strong Payment declined 
+								|  for ‘ID-84821’
+						+box-link
+					
+					.timeline-item.success
+						.timeline-icon
+							i.fas.fa-broom
+						.timeline-item-content
+							.timeline-time 2h 30m ago
+							.timeline-text
+								strong Martin Palermo 
+								| added cleaning for booking ‘ID-4828’ 
+						+box-link
+						
+					.timeline-item.warning
+						.timeline-icon
+							i.fas.fa-home
+						.timeline-item-content
+							.timeline-time 2h 30m ago
+							.timeline-text
+								strong Property ‘2-bed apartment… Da Nang, VN’ 
+								|  successfully sindicated to AirBNB and Agoda 
+						+box-link
+					
+					.timeline-item.warning
+						.timeline-icon
+							i.fas.fa-home
+						.timeline-item-content
+							.timeline-time 2h 30m ago
+							.timeline-text
+								strong Property ‘2-bed apartment… Da Nang, VN’ 
+								|  successfully sindicated to AirBNB and Agoda 
+						+box-link
+					
+					.timeline-item.warning
+						.timeline-icon
+							i.fas.fa-home
+						.timeline-item-content
+							.timeline-time 2h 30m ago
+							.timeline-text
+								strong Property ‘2-bed apartment… Da Nang, VN’ 
+								|  successfully sindicated to AirBNB and Agoda 
+						+box-link
+						
+						
+						
+mixin filter-collapse
+	#filter-collapse.collapse
+		form.filter-form
+			.form-row.align-items-end
+				.form-group.col-md-3
+					label(for='filter-search') Search
+					input#filter-search.form-control.form-control-sm(type='text', placeholder='Start typing …')
+				.form-group.col-md-4
+					label(for='filter-date') Check-in Date
+					.btn-group(role='group', aria-label='Basic example')
+						button.btn.btn-outline-secondary.btn-sm.active(type='button') All
+						button.btn.btn-outline-secondary.btn-sm(type='button') Today
+						button.btn.btn-outline-secondary.btn-sm(type='button') Select Date
+
+				.form-group.col-md-2
+					label(for='filter-payment-status') Payment Status
+					select.custom-select.custom-select-sm#filter-payment-status
+						option All
+						option Declined
+						option Pending
+						option Paid
+				.form-group.col-md-2
+					label(for='filter-verification-status') Verification Status
+					select.custom-select.custom-select-sm#filter-verification-status
+						option All
+						option Verified
+						option Un-verified
+				.form-group.col-md-1
+					a.btn.btn-sm.btn-block.btn-outline-danger(href='#0') Reset
+					
+	mixin booking-card-info
+		.booking-card-info
+			.booking-card-info-property
+				.booking-source-img
+					img(src='img/expedia-logo.png')
+				a(href='#0') 2-bedroom apartment in Da Nang, VN
+			.booking-card-info-buttons.ml-md-auto.mr-1
+				a.btn.btn-xs Upload ID
+				a.btn.btn-xs Add Payment
+
+			.dropdown.dropdown-sm.ml-auto.ml-md-0
+				a.btn.btn-xs.dropdown-toggle#moreMenu(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') More
+				.dropdown-menu.dropdown-menu-right(aria-labelledby='moreMenu')
+					a.dropdown-item(href='#') Action
+					a.dropdown-item(href='#') Another action
+					a.dropdown-item(href='#') Something else here
+					
+					
+	mixin booking-card-collapse(id)
+		a.card-collapse.collapsed(data-toggle='collapse', href='#'+id, role='button', aria-expanded='false', aria-controls=id)
+			i.fas.fa-chevron-up
+		.booking-card-body.collapse(id=id)
+			.booking-card-details
+				div
+					.small Booking Date
+					span 23 Jan 2019 
+				div
+					.small Guest Contact
+					span 317-882-3573
+					br
+					span thomas_horton@gmail.com
+				div
+					.small Arrival Time
+					span 2:00 pm
+				div
+					.small Guests
+					span 2
+				div
+					.small Channel Ref
+					span 81457094681
+
+			.card-section.booking-card-payment-status
+				.card-section-title Payment Status
+				.booking-card-status-grid
+
+					.status-grid-item
+						.grid-item-content.danger
+							.grid-item-icon
+								i.fas.fa-exclamation-circle
+							.grid-item-title Authorization
+								span $150
+							.small.text-muted 50% of booking fee
+							.status-grid-item-state
+								span.badge.badge-danger Declined
+								span.small.text-muted.ml-1 on Dec 5
+							.grid-item-action
+								.dropdown.dropdown-sm.ml-auto.ml-md-0
+									a.btn.btn-xs.dropdown-toggle#moreMenu(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+									.dropdown-menu.dropdown-menu-right(aria-labelledby='moreMenu')
+										a.dropdown-item(href='#') Action
+										a.dropdown-item(href='#') Another action
+										a.dropdown-item(href='#') Something else here
+					.status-grid-item
+						.grid-item-content.success
+							.grid-item-icon
+								i.fas.fa-exclamation-circle
+							.grid-item-title Authorization
+								span $150
+							.small.text-muted 50% of booking fee
+							.status-grid-item-state
+								span.badge.badge-success Accepted
+								span.small.text-muted.ml-1 on Dec 5
+							.grid-item-action
+								.dropdown.dropdown-sm.ml-auto.ml-md-0
+									a.btn.btn-xs.dropdown-toggle#moreMenu(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+									.dropdown-menu.dropdown-menu-right(aria-labelledby='moreMenu')
+										a.dropdown-item(href='#') Action
+										a.dropdown-item(href='#') Another action
+										a.dropdown-item(href='#') Something else here
+					.status-grid-item
+						.grid-item-content.warning
+							.grid-item-icon
+								i.fas.fa-exclamation-circle
+							.grid-item-title Authorization
+								span $150
+							.small.text-muted 50% of booking fee
+							.status-grid-item-state
+								span.badge.badge-warning Scheduled
+								span.small.text-muted.ml-1 on Dec 5
+							.grid-item-action
+								.dropdown.dropdown-sm.ml-auto.ml-md-0
+									a.btn.btn-xs.dropdown-toggle#moreMenu(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+									.dropdown-menu.dropdown-menu-right(aria-labelledby='moreMenu')
+										a.dropdown-item(href='#') Action
+										a.dropdown-item(href='#') Another action
+										a.dropdown-item(href='#') Something else here
+					.status-grid-item
+						.grid-item-content.warning
+							.grid-item-icon
+								i.fas.fa-exclamation-circle
+							.grid-item-title Authorization
+								span $150
+							.small.text-muted 50% of booking fee
+							.status-grid-item-state
+								span.badge.badge-warning Scheduled
+								span.small.text-muted.ml-1 on Dec 5
+							.grid-item-action
+								.dropdown.dropdown-sm.ml-auto.ml-md-0
+									a.btn.btn-xs.dropdown-toggle#moreMenu(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+									.dropdown-menu.dropdown-menu-right(aria-labelledby='moreMenu')
+										a.dropdown-item(href='#') Action
+										a.dropdown-item(href='#') Another action
+										a.dropdown-item(href='#') Something else here
+
+
+
+			.card-section.booking-card-payment-status
+				.card-section-title Payment Summary
+
+				
+				.table-responsive
+					table.table.table-borderless.payment-status-table
+						tr
+							td 
+								.small Total Authorizations
+								span.text-success $150
+							td
+								.small Total Charges
+								span.text-success $150
+							td
+								.small Total Refunds
+								span.text-muted —
+							td
+								.small Total Failed
+								span.text-danger $420
+							td
+								.small Total Scheduled
+								span.text-warning $200
+							td.text-right
+								a.btn.btn-xs(href='#0') Additional Charge
+								a.btn.btn-xs.ml-1(href='#0') Apply Payment
+
+			.card-section
+				.card-section-title Activity Log
+				.card-inset-table
+					.table-responsive
+							table.table
+								tr
+									th ID
+									th Type
+									th Event Date
+									th Description
+								tr
+									td 2345
+									td
+										.badge.badge-danger Payment Declined
+									td Nov 5, 2018 @ 2:40 pm
+									td Payment of $248
+										span.text-muted.ml-2 on Visa card ending with 675
+								tr
+									td 2345
+									td
+										.badge.badge-success Payment Accepted
+									td Nov 5, 2018 @ 2:40 pm
+									td Payment of $248
+										span.text-muted.ml-2 on Visa card ending with 675
+								tr
+									td 2345
+									td
+										.badge.badge-danger Payment Declined
+									td Nov 5, 2018 @ 2:40 pm
+									td Payment of $248
+										span.text-muted.ml-2 on Visa card ending with 675
+
+
+			
+					
+				
+				
+mixin property-action-dropdown
+	.dropdown.dropdown-sm
+		a.btn.btn-xs.dropdown-toggle#moreMenu(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+			i.fas.fa-ellipsis-h
+		.dropdown-menu.dropdown-menu-right(aria-labelledby='moreMenu')
+			a.dropdown-item(href='#') Action
+			a.dropdown-item(href='#') Another action
+			a.dropdown-item(href='#') Something else here
+			
+mixin checkbox-toggle(id, title)
+	.checkbox-toggle
+		input(id=id, type='checkbox', name=id)
+		label.checkbox-label(for=id) 
+			span.toggle-track
+				span.toggle-switch
+			span.toggle-title=title
+		
+mixin checkbox-toggle-highlighted(id)
+	.checkbox-toggle.checkbox-choice
+		input(id=id, type='checkbox', name=id, checked='')
+		label.checkbox-label(for=id, data-off='Inactive', data-on='Active')
+			span.toggle-track
+				span.toggle-switch
+			span.toggle-title
+		
+
+mixin dropdown-action(id)
+	.dropdown.dropdown-sm.dropdown-compact.float-right
+		a.btn.btn-xs.dropdown-toggle(id=id, href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+		.dropdown-menu.dropdown-menu-right(aria-labelledby=id)
+			a.dropdown-item(href='#') Edit
+			a.dropdown-item(href='#') Delete
+		
+		
+mixin property-card-collapse(id)
+	a.card-collapse.collapsed(data-toggle='collapse', href='#'+id, role='button', aria-expanded='false', aria-controls=id)
+		i.fas.fa-chevron-up
+	.property-card-body.collapse(id=id)
+		.property-card-details
+			.row
+				.col.col-sm-6
+					.form-group
+						label.form-label-sm(for='') Property ID
+						input.form-control.form-control-sm(readonly, value='ID-545934')
+				.col.col-sm-6
+					.form-group
+						label.form-label-sm(for='') Property Timezone
+						select.custom-select.custom-select-sm
+							option CET (UTC +1)
+							option CET (UTC +1)
+							option CET (UTC +1)
+		.card-section
+			.card-section-title Booking Channel Settings
+				ul.nav.nav-pills.custom-pills#channel-settings
+					li.nav-item
+						a.nav-link#global-tab(data-toggle="tab" href="#global-settings-pane" role="tab" aria-controls="global-settings-pane" aria-selected="true") Use Global Settings
+					li.nav-item
+						a.nav-link.active#custom-tab(data-toggle="tab" href="#custom-settings-pane" role="tab" aria-controls="custom-settings-pane" aria-selected="true") Use Custom Settings
+			.tab-content#channel-settings-pane
+				.tab-pane.fade#global-settings-pane(role="tabpanel" aria-labelledby="global-tab")
+					.card-inset-table 
+						.table-responsive
+								table.table
+									tr
+										th.pt-2.text-center This property imports Global Booking Channel Settings. You can manage them on 
+											a(href='#0') Settings Page
+				.tab-pane.fade.show.active#custom-settings-pane(role="tabpanel" aria-labelledby="custom-tab")
+					.card-inset-table 
+						.table-responsive
+								table.table
+									tr
+										th(colspan='2') Channel
+										th Booking Deposit
+										th Booking Payment
+										th Security Deposit
+										th Return Rules
+									tr
+										td.py-2.pr-0
+											.booking-list-item-src.pr-0.mr-1
+												img(src='img/booking-logo.png' alt='')
+										td.py-2.pl-0
+											strong Booking.com
+											br
+											a.small(href='#0') View
+										td.py-2
+											| Enabled
+											.small.text-muted 10% of Booking
+										td.py-2 
+											| Enabled
+											.small.text-muted 24h before check-in
+										td.py-2 
+											| Enabled
+											.small.text-muted $300 per booking
+										td.py-2 
+											| Enabled
+											.small.text-muted 2 rules
+										td.text-right.py-2
+											+dropdown-action('dropdown-1')
+									tr
+										td.py-2.pr-0
+											.booking-list-item-src.pr-0.mr-1
+												img(src='img/expedia-logo.png' alt='')
+										td.py-2.pl-0
+											strong Expedia.com
+											br
+											a.small(href='#0') View
+										td.py-2
+											| Enabled
+											.small.text-muted 10% of Booking
+										td.py-2 
+											| Enabled
+											.small.text-muted 24h before check-in
+										td.py-2 
+											| Enabled
+											.small.text-muted $300 per booking
+										td.py-2 
+											| Enabled
+											.small.text-muted 2 rules
+										td.py-2
+											+dropdown-action('dropdown-2')
+									tr
+										td.text-center.pt-3(colspan='7')
+											a.btn.btn-success.btn-xs(href='#0') Add Channel
+											
+											
+		.card-section
+			.card-section-title Payment Gateway Settings
+				ul.nav.nav-pills.custom-pills#gateway-settings
+					li.nav-item
+						a.nav-link#global-tab2(data-toggle="tab" href="#global-settings-pane2" role="tab" aria-controls="global-settings-pane2" aria-selected="true") Use Global Settings
+					li.nav-item
+						a.nav-link.active#custom-tab2(data-toggle="tab" href="#custom-settings-pane2" role="tab" aria-controls="custom-settings-pane2" aria-selected="true") Use Custom Settings
+			.form-group.row.mt-2.mb-0
+				label.col-3.col-sm-9.mb-0.text-right(for='filter-payment-status', style='margin-top:3px') 
+					small Currency
+				.col.col-sm-3
+					select.custom-select.custom-select-sm#filter-payment-status.mb-0
+						option CAD
+						option USD
+						option EUR
+					
+					
+			.tab-content#gateway-settings-pane
+				
+				.tab-pane.fade#global-settings-pane2(role="tabpanel" aria-labelledby="global-tab2")
+					.card-inset-table 
+						.table-responsive
+								table.table
+									tr
+										th.pt-2.text-center This property imports Global Payment Gateway Settings. You can manage them on 
+											a(href='#0') Settings Page
+				.tab-pane.fade.show.active#custom-settings-pane2(role="tabpanel" aria-labelledby="custom-tab2")
+					.card-inset-table 
+						.table-responsive
+								table.table
+									tr
+										td.py-2.pr-0
+											.booking-list-item-src.pr-0.mr-1
+												img(src='img/stripe-logo.png' alt='')
+										td.py-2.pl-0
+											strong.h6 Stripe
+										td.py-2
+											.form-group.mb-0
+												label.form-label-sm(for='') Secret Key
+												input.form-control.form-control-sm(value='sk_test_u4g36iqGsMETvAxK2yA3q1rS')
+										td.py-2
+											.form-group.mb-0
+												label.form-label-sm(for='') Publishable key
+												input.form-control.form-control-sm(value='sk_test_u4g36iqGsMETvAxK2yA3q1rS')
+										td.py-2.text-right
+											+dropdown-action('dropdown-3')
+									tr
+										td.py-2.pr-0
+											.booking-list-item-src.pr-0.mr-1
+												img(src='img/stripe-logo.png' alt='')
+										td.py-2.pl-0
+											strong.h6 Stripe
+										td.py-2
+											.form-group.mb-0
+												label.form-label-sm(for='') Secret Key
+												input.form-control.form-control-sm(value='sk_test_u4g36iqGsMETvAxK2yA3q1rS')
+										td.py-2
+											.form-group.mb-0
+												label.form-label-sm(for='') Publishable key
+												input.form-control.form-control-sm(value='sk_test_u4g36iqGsMETvAxK2yA3q1rS')
+										td.py-2.text-right
+											+dropdown-action('dropdown-3')
+									tr
+										td.text-center.pt-3(colspan='5')
+											a.btn.btn-success.btn-xs(href='#0') Add Payment Gateway
+											
+								
+							
+		.property-card-footer
+			a.btn.btn-sm.btn-success(href='#0') Save Changes
+		
+		
+		
+		
+mixin user-card-collapse(id)
+	a.card-collapse.collapsed(data-toggle='collapse', href='#'+id, role='button', aria-expanded='false', aria-controls=id)
+		i.fas.fa-chevron-up
+	.user-card-body.collapse(id=id)
+		.card-section.mt-2
+				.card-section-title Activity Log
+				.card-inset-table
+					.table-responsive
+							table.table
+								tr
+									th Date & Time
+									th Event
+
+								tr
+									td 05 Feb 2019 @ 2:39 pm
+									td Guest ID (Michael Dunn) uploaded
+									
+								tr
+									td 05 Feb 2019 @ 2:39 pm
+									td Booking #85899 approved
+									
+								tr
+									td 05 Feb 2019 @ 2:39 pm
+									td Account Created
+									
+mixin accordion-header(id, target, logo, title)
+	.card-header(id=id)
+		a.booking-accordion-title.collapsed(data-toggle='collapse', data-target='#'+target, aria-expanded='true', aria-controls=target)
+			.booking-source-logo
+				img(src=logo)
+			=title
+			.accordion-toggle
+			
+mixin divider
+	.source-divider
+		span or Set settings manually ↓
+		
+mixin auto-settings(id)
+	.input-group.input-group-sm
+		.input-group-prepend
+			label.input-group-text(for=id) Copy settings from
+		select.custom-select.custom-select-sm(id=id)
+			option(selected='') Choose...
+			option(value='1') Expedia
+			option(value='2') Agora
+			option(value='3') AirBNB
+			
+mixin checkbox(id, value, label)
+	.custom-control.custom-checkbox.mb-2
+		input.custom-control-input(id=id, type='checkbox', value=value)
+		label.custom-control-label(for=id)=label
+		
+mixin gp-header
+	.gp-header
+		a.company-logo(href='#')
+			img(src='img/gp-logo.png' alt='LakeHill Host')
+		.gp-nav
+			a(href='#')
+				i.fas.fa-phone-volume 
+				span  814-338-0971
+			a(href='#') 
+				i.far.fa-envelope 
+				span  Email Us
+		a.btn.btn-success.text-white.chat-open(href='#0' data-target='#chat-panel' aria-controls='chat-panel')
+			i.far.fa-comment  
+			span  Live Chat
+
+mixin chat
+	.chat-panel#chat-panel
+		a.chat-dismiss(href='#0')
+			span Close 
+			i.fas.fa-times
+		.chat-panel-title
+			h4 Live Chat
+		.chat-content
+		
+			// Chat Messages
+			
+			.chat-message.message-inbox
+				.message-avatar
+					img(src='img/user-lg.png' alt='')
+				.message-bulb
+					.message-author Estella Lowe:
+					.message-description
+						p Welcome home Olga.
+						p Please let us know if you need any help.
+					.message-legend 2:40pm
+					
+			.chat-message.message-sent.message-read
+				.message-bulb
+					.message-author You:
+					.message-description
+						p Hello Estella. I’d like to report a problem. Bedroom AC doesn’t work as well. 
+					.message-legend 
+						i.fas.fa-check-double
+						|  2:40pm
+						
+			.chat-message.message-sent.message-attachment.message-read
+				.message-bulb
+					.message-image
+						img(src='img/property.png' alt='')
+					.message-legend 
+						i.fas.fa-check-double
+						|  2:40pm
+						
+			.chat-message.message-inbox
+				.message-avatar
+					img(src='img/user-lg.png' alt='')
+				.message-bulb
+					.message-author Estella Lowe:
+					.message-description
+						p Please check this button on your TV remote.
+					.message-legend 2:40pm
+			
+			.chat-message.message-inbox.message-attachment
+				.message-avatar
+					img(src='img/user-lg.png' alt='')
+				.message-bulb
+					.message-image
+						img(src='img/property.png' alt='')
+					.message-legend 2:40pm
+					
+			.chat-message.message-sent
+				.message-bulb
+					.message-author You:
+					.message-description
+						p Found it!
+					.message-legend 
+						i.fas.fa-check-double
+						|  2:40pm
+						
+			.chat-message.message-sent
+				.message-bulb
+					.message-author You:
+					.message-description
+						p Oh! Thanks! It works! 
+					.message-legend 
+						i.fas.fa-check
+						|  2:40pm
+			
+				
+			
+			// end Chat Messages
+			
+			
+			// Chat Templates
+			.chat-templates
+				.chat-template-item
+					a(href='#0') I need a direction to hotel…
+				.chat-template-item
+					a(href='#0') I want to report a problem
+				.chat-template-item
+					a(href='#0') What is Wi-Fi password?
+				.chat-template-item
+					a(href='#0') How to turn on hot-water?
+				.chat-template-item
+					p or simply type your message below...
+			
+			// end Chat Templates
+				
+					
+		.chat-controls
+			textarea.form-control.chat-input(placeholder='Type message')
+			a.chat-attachment-btn
+				i.fas.fa-paperclip
+				span Send file
+			button.btn.btn-success
+				i.fas.fa-paper-plane    
+				span Send
+				
+mixin dl(dt, dd)
+	dl.gp-dl
+		dt=dt
+		dd=dd
+			

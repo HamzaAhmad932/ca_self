@@ -1,0 +1,151 @@
+extends _main2.pug
+
+block title
+	| Account Setup - Payment Rules
+	
+block style
+
+block content
+	
+	.page-header.text-center.mb-3
+		h1.page-title Set Up Your Account 
+			
+		
+	.page-body
+		.content-box
+			
+			.setup-box
+				nav.setup-steps
+					a.setup-step-item.connected(href='setup-step1.html')
+						.step-icon
+							i.fas.fa-cogs
+						.setup-title 1. PMS
+					a.setup-step-item.connected(href='setup-step2.html')
+						.step-icon
+							i.fas.fa-home
+						.setup-title 2. Properties
+					a.setup-step-item.active(href='setup-step3.html')
+						.step-icon
+							i.fas.fa-hand-holding-usd
+						.setup-title 3. Payment Rules
+					a.setup-step-item(href='setup-step4.html')
+						.step-icon
+							i.fas.fa-credit-card
+						.setup-title 4. Payment Gateways
+				.setup-body
+					h4.setup-page-title Set your payment rules for booking sources
+					
+					#sourceBooking1.accordion.mb-2
+						.card
+						
+							+accordion-header('headingOne', 'collapseOne', 'img/booking-logo.png', 'Booking.com')
+							
+							#collapseOne.collapse(aria-labelledby='headingOne', data-parent='#sourceBooking1')
+								.card-body
+									+auto-settings('autoSettingsOne')
+									+divider
+									
+									#cardValidation.accordion.mb-2
+										.card
+											#settingsOne.card-header
+												a.booking-accordion-title.collapsed(data-toggle='collapse', data-target='#settings1', aria-expanded='true', aria-controls='settings1')
+													| Credit Card Validation
+													span.ml-1 (Authorization and not a charge)
+													.accordion-toggle
+													
+											#settings1.collapse(aria-labelledby='settingsOne', data-parent='#cardValidation')
+												.card-body
+													.card-section-title.mt-1.mb-2 How much to authorize?
+													
+													.form-row.align-items-end.mb-2
+														.form-group.col-md-6
+															label(for='amountType') Amount Type
+															select#amountType.custom-select.custom-select-sm
+																option Fixed Amount
+																option Option 2
+																option Option 3
+														.form-group.col-md-6
+															label(for='fixedAmount') Fixed Amount
+															input#fixedAmount.form-control.form-control-sm(type='text', value='75.00')
+
+													.card-section-title.mt-1.mb-2 When to authorize?
+													.form-row.align-items-end.mb-2
+														.form-group.col-md-6
+															label(for='timeAfterBooking') Time After Booking
+															select#timeAfterBooking.custom-select.custom-select-sm
+																option Immediately
+																option 1 hour
+																option 24 hours
+														.form-group.col-md-6
+															.form-check.mb-1
+																input#checkAuto.form-check-input(type='checkbox')
+																label.form-check-label(for='checkAuto')
+																	| Automatically re-authorize every seven days
+
+													.alert.alert-warning.mb-1(role='alert')
+														i.fas.fa-exclamation-circle 
+														|  Note: Above rules do not apply to virtual cards
+
+												
+									#paymentSchedule.accordion.mb-2
+										.card
+											#settingsTwo.card-header
+												a.booking-accordion-title.collapsed(data-toggle='collapse', data-target='#settings2', aria-expanded='true', aria-controls='settings2')
+													| Payment Schedule
+													.accordion-toggle
+													
+											#settings2.collapse(aria-labelledby='settingsTwo', data-parent='#paymentSchedule')
+												.card-body
+													p some text
+												
+									#securityDeposit.accordion.mb-2
+										.card
+											#settingsThree.card-header
+												a.booking-accordion-title.collapsed(data-toggle='collapse', data-target='#settings3', aria-expanded='true', aria-controls='settings3')
+													| Security / Damage Deposit
+													.accordion-toggle
+													
+											#settings3.collapse(aria-labelledby='settingsThree', data-parent='#securityDeposit')
+												.card-body
+													p some text
+												
+									#cancelationPolicy.accordion.mb-2
+										.card
+											#settingsFour.card-header
+												a.booking-accordion-title.collapsed(data-toggle='collapse', data-target='#settings4', aria-expanded='true', aria-controls='settings4')
+													| Cancellation Policy Setting
+													.accordion-toggle
+													
+											#settings4.collapse(aria-labelledby='settingsFour', data-parent='#cancelationPolicy')
+												.card-body
+													p some text
+												
+												
+										
+									
+									
+									
+									
+
+					
+					#sourceBooking2.accordion.mb-2
+						.card
+							+accordion-header('headingTwo', 'collapseTwo', 'img/expedia-logo.png', 'Expedia.com')
+							
+							#collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#sourceBooking2')
+								.card-body
+									| Card Content
+					
+					
+					
+					
+				.setup-footer.d-flex.justify-content-center
+					a.btn.btn-light.align-self-start.setup-back.text-muted(href='setup-step2.html') 
+						i.fas.fa-arrow-left
+						span  Back 
+					a.btn.btn-success.px-md-4(href='setup-step4.html') Save and Continue 
+						i.fas.fa-arrow-right
+				
+				
+				
+block scripts

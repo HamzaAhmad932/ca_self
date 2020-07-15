@@ -1,0 +1,22 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/auth.css": "/css/auth.css",
+    "/js/admin0.js": "/js/admin0.js",
+    "/js/auth0.js": "/js/auth0.js",
+    "/js/client0.js": "/js/client0.js",
+    "/js/client0~js/client_020.js": "/js/client0~js/client_020.js",
+    "/js/client0~js/client_030.js": "/js/client0~js/client_030.js",
+    "/js/client0~js/guest0~js/guest1.js": "/js/client0~js/guest0~js/guest1.js",
+    "/js/client_02.js": "/js/client_02.js",
+    "/js/client_020.js": "/js/client_020.js",
+    "/js/client_030.js": "/js/client_030.js",
+    "/js/guest0.js": "/js/guest0.js",
+    "/js/guest0~js/guest1.js": "/js/guest0~js/guest1.js",
+    "/js/guest1.js": "/js/guest1.js",
+    "/vendors~js/admin0~js/client_020.js": "/vendors~js/admin0~js/client_020.js",
+    "/vendors~js/client.js": "/vendors~js/client.js",
+    "/vendors~js/client0.js": "/vendors~js/client0.js",
+    "/vendors~js/client_020.js": "/vendors~js/client_020.js",
+    "/vendors~js/client_030.js": "/vendors~js/client_030.js"
+}

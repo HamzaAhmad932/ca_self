@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+*, *::before, *::after {-webkit-box-sizing: border-box;box-sizing: border-box}
+
+html {-webkit-text-size-adjust: 100%; -ms-overflow-style: scrollbar;-webkit-tap-highlight-color: rgba(0, 0, 0, 0)}
+html, body {
+    display:block;
+    float:left;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 300;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width:100%;
+}
+
+.d-block{display:block !important;} .overflow-hidden{overflow:hidden !important;}
+.float-left{float:left !important;} .float-right{float:right !important;} .w-100{width:100% !important;}
+.full-row{display:block !important;overflow:hidden !important;float:left !important;width:100% !important;}
+
+.m--login__signin_wrapper .m--login__signin_container a{color:#0779F0!important;font-weight:400;text-decoration:none!important;}
+.m--login__signin_wrapper .m--login__signin_container a:hover{text-decoration:underline!important;}
+
+.m--login__signin_wrapper{background:#D9E2EC!important;height:100vh;overflow:auto;}
+.m--login__signin_wrapper .m--login__signin_container {margin:0 auto 40px;width:430px;}
+.alert-outer{height:40px;line-height:40px;margin:10px 0px;}
+.m--login__signin_wrapper .m--login__signin_container .m__logo{margin:0px 0px 20px 0px !important;text-align:center;}
+
+.forms-portion-outer{background:transparent;border-radius:0.3rem;}
+.forms-portion-outer .form-body-outer{background:#fff;margin:0px;padding:20px 40px;}
+.forms-portion-outer .form-body-outer .m-login__head{border-bottom:1px solid #D9E2EC;margin:0px 0px 15px 0px!important;padding:5px 0px!important;position:relative;}
+.forms-portion-outer .form-body-outer .m-login__head h3{color:#102A43 !important;font-size:1.5rem;margin:0 0 1rem 0;text-align:center;font-weight:500;}
+.error_wrapper{height:15px;line-height:12px;margin:0 0 4px 0;padding:0px 5px;}
+
+.forms-portion-outer form input[type='email'],
+.forms-portion-outer form input[type='password'],
+.forms-portion-outer form input[type='text']{background-clip:padding-box;background-color:transparent;border:1px solid #9FB3C8;border-radius:4px;color:#486581;display:block;float:left;font-family:inherit;font-size:13px;font-weight:300;line-height:1.5;padding:5px 10px;transition:border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;width:calc(100% - 0px);}
+
+.forms-portion-outer form input[type='email']::placeholder,
+.forms-portion-outer form input[type='password']::placeholder,
+.forms-portion-outer form input[type='text']::placeholder{color:#999;font-size:12px;font-family:inherit;}
+
+#register-form .vti__dropdown ul.vti__dropdown-list {width:350px !important;}
+
+.has-error input{border:1px solid #dc3545 !important;}
+.has-error input::placeholder{color:#dc3545 !important;}
+
+/************************ Checkbox and radio custom design start ************************/
+label.m-radio, label.m-checkbox {display:inline-block;cursor:pointer;float:left;font-size:1rem;height:20px;line-height: 20px; margin-bottom: 10px;padding-left: 30px;position: relative;-webkit-transition: all 0.3s;transition: all 0.3s;}
+label.m-radio > input, label.m-checkbox > input {box-sizing:border-box;filter:alpha(opacity=0);font-family:inherit;font-size:inherit;height:100%;left:0px;line-height:inherit;margin:0;opacity:0;padding:0;position:absolute;top:0px;width:100%;z-index:-1;}
+label.m-radio > i, label.m-checkbox > i {color:#a1a1a1!important;font-size:12px!important;font-style:normal;font-weight:400;}
+label.m-checkbox span {border: 1px solid #a1a1a1!important;}
+label.m-radio > span, label.m-checkbox > span {border-radius: 3px;left: 0;height: 18px;position: absolute;top: 1px;width: 18px;}
+label.m-radio > input:checked ~ span,
+label.m-radio:hover > input:not([disabled]):checked ~ span,
+label.m-checkbox > input:checked ~ span,
+.m-checkbox:hover > input:not([disabled]):checked ~ span {-webkit-transition: all 0.3s;transition: all 0.3s;}
+label.m-radio > input:checked ~ span:after, label.m-checkbox > input:checked ~ span:after {display: block;}
+label.m-checkbox > span:after { border: solid #777777;}
+label.m-checkbox > span:after {border-width:0 2px 2px 0 /*rtl:ignore*/ !important;height:10px;left:50%;margin-left:-2px;margin-top:-6px;top:50%;-webkit-transform:rotate(45deg);transform:rotate(45deg) /*rtl:ignore*/;width:5px;}
+label.m-radio > span:after, label.m-checkbox > span:after {content:'';display:none;position:absolute;}
+/************************ Checkbox and radio custom design end ************************/
+
+/************************ Buttons style start ************************/
+.btn-green{background-color:#1EAF24;border:1px solid rgba(0, 0, 0, 0.1);box-shadow:0 1px 2px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.12);color:#fff;}
+.btn-green:hover{background-color:#188e1d;border-color:#17831b;color:#fff;}
+.btn-gray{background-color:#D9E2EC;border:1px solid #BCCCDC;box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.12); border-radius:3px;color:#334E68!important;}
+.btn-gray:hover{background-color:#536a81;border-color:#4e6479;color:#fff!important;}
+.btn.focus, .btn:focus {box-shadow:none;}
+/************************ Buttons style end ************************/
+
+/************************ Bootstrap model popup start ************************/
+.modal.show{background: rgba(0, 0, 0, 0.65);color:#3f4047;}
+.modal-lg, .modal-xl {margin:1.75rem auto; max-width:98%;}
+#terms_conditions_modal .modal-header{padding:10px !important;}
+.modal .modal-content .modal-header .modal-title {font-size:1.2rem;font-weight:400;height:40px;line-height:46px;}
+.modal .modal-content .modal-header button.close {line-height:inherit;margin:0px;padding:5px;}
+.modal .modal-content .modal-body{height:calc(100vh - 3.5rem - 120px); overflow-y:scroll;}
+.modal .modal-content .modal-footer {padding:10px !important;}
+/************************ Bootstrap model popup End ************************/
+
+.form-footer-outer{background:#F0F4F8;border-top:1px solid #F0F4F8;margin:0px;padding:20px 20px;}
+.form-footer-outer p{color:#486581;margin:0px 0px 3px 0px;padding:0px;text-align:center;}
+
+/*.alert-custom.alert-success{background:#d4edda!important;border:1px solid #c3e6cb;border-radius:.25rem;color:#155724;margin:0px!important;padding:6px 10px!important;position:relative;}
+.alert-custom.alert-success button{color:#155724!important;padding:10px 8px!important;font-size:12px!important;}
+.alert-custom.alert-danger{background:#f8d7da!important;border:1px solid #f5c6cb;border-radius:.25rem;color:#721c24;margin:0px!important;padding:6px 10px!important;position:relative;}
+.alert-custom.alert-danger button{color:#721c24!important;padding:10px 8px!important;font-size:12px!important;}
+button.not_send{cursor:not-allowed;}*/
+
+@media (max-width: 450px){
+    .m--login__signin_wrapper .m--login__signin_container { width:98%;}
+    #register-form .vti__dropdown ul.vti__dropdown-list {width:250px !important;}
+}
+

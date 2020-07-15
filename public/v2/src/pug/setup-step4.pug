@@ -1,0 +1,65 @@
+extends _main2.pug
+
+block title
+	| Account Setup - Payment Gateways 
+	
+block style
+
+block content
+	
+	.page-header.text-center.mb-3
+		h1.page-title Set Up Your Account 
+			
+		
+	.page-body
+		.content-box
+			
+			.setup-box
+				nav.setup-steps
+					a.setup-step-item.connected(href='setup-step1.html')
+						.step-icon
+							i.fas.fa-cogs
+						.setup-title 1. PMS
+					a.setup-step-item.connected(href='setup-step2.html')
+						.step-icon
+							i.fas.fa-home
+						.setup-title 2. Properties
+					a.setup-step-item.connected(href='setup-step3.html')
+						.step-icon
+							i.fas.fa-hand-holding-usd
+						.setup-title 3. Payment Rules
+					a.setup-step-item.active(href='setup-step4.html')
+						.step-icon
+							i.fas.fa-credit-card
+						.setup-title 4. Payment Gateways
+				.setup-body
+					h4.setup-page-title Connect Payment Gateway to manage payments
+					
+					form.pms-setup-form
+						.form-group
+							label Select Payment Gateway
+							select.custom-select.custom-select-sm
+								option(selected) BookingAutomation.com
+								option Something else
+								option Something else 2
+								option Booking System 3
+						.form-group
+							label Secret Key
+							input.form-control.form-control-sm(type='text' placeholder='Secret Key')
+						.form-group
+							label Publishable Key
+							input.form-control.form-control-sm(type='text' placeholder='Publishable Key')
+					
+					
+					
+					
+				.setup-footer.d-flex.justify-content-center
+					a.btn.btn-light.align-self-start.setup-back.text-muted(href='setup-step3.html') 
+						i.fas.fa-arrow-left
+						span  Back 
+					a.btn.btn-success.px-md-4(href='index.html') Save and Continue 
+						i.fas.fa-arrow-right
+				
+				
+				
+block scripts

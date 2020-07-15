@@ -1,0 +1,99 @@
+extends _main2.pug
+
+block title
+	| Account Setup - Properties
+	
+block style
+
+block content
+	
+	.page-header.text-center.mb-3
+		h1.page-title Set Up Your Account 
+			
+		
+	.page-body
+		.content-box
+			
+			.setup-box
+				nav.setup-steps
+					a.setup-step-item.connected(href='setup-step1.html')
+						.step-icon
+							i.fas.fa-cogs
+						.setup-title 1. PMS
+					a.setup-step-item.active(href='setup-step2.html')
+						.step-icon
+							i.fas.fa-home
+						.setup-title 2. Properties
+					a.setup-step-item(href='setup-step3.html')
+						.step-icon
+							i.fas.fa-hand-holding-usd
+						.setup-title 3. Payment Rules 
+					a.setup-step-item(href='setup-step4.html')
+						.step-icon
+							i.fas.fa-credit-card
+						.setup-title 4. Payment Gateways
+				.setup-body
+					h4.setup-page-title Connect your property list
+					
+					.row.justify-space-between
+						.col-md-4
+							.form-group.mb-2
+								input.form-control.form-control-sm(type='text' placeholder='Search...')
+						.col-md-8.col-lg-6.ml-auto
+							.connection-btn-stack
+								a.btn.btn-sm.btn-secondary.px-3(href='#0') Generate Key
+								.btn-group
+									a.btn.btn-sm.btn-secondary.px-3(href='#0') Connect All
+									a.btn.btn-sm.btn-secondary.px-3(href='#0') Disconnect All
+					.card-inset-table
+						.table-responsive
+							table.table
+								tr
+									th ID
+									th Name
+									th.text-center Currency
+									th Connection Message
+								tr
+									td ID-5949
+									td 
+										strong Ocean Villa
+										.small.text-muted 127 Marlon Ways Suite 704
+									td.text-center CAD
+									td
+										.badge.badge-success Connected
+										
+								tr
+									td ID-5949
+									td 
+										strong Ocean Villa
+										.small.text-muted 127 Marlon Ways Suite 704
+									td.text-center CAD
+									td
+										.badge.badge-danger PMS Key Missing
+								
+								tr
+									td ID-5949
+									td 
+										strong Ocean Villa
+										.small.text-muted 127 Marlon Ways Suite 704
+									td.text-center CAD
+									td
+										.badge.badge-success Connected
+								tr
+									td.text-center.pt-0.pb-1(colspan='4')
+										+loader
+									
+									
+						
+					
+					
+				.setup-footer.d-flex.justify-content-center
+					a.btn.btn-light.align-self-start.setup-back.text-muted(href='setup-step1.html') 
+						i.fas.fa-arrow-left
+						span  Back 
+					a.btn.btn-success.px-md-4(href='setup-step3.html') Save and Continue 
+						i.fas.fa-arrow-right
+				
+				
+				
+block scripts

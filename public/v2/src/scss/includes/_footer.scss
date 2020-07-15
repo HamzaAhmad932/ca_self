@@ -1,0 +1,20 @@
+footer {
+	background: $gray-300;
+	font-size: 0.875rem;
+	height: 3.5rem;
+	position: relative;
+	z-index: 1;
+	a:hover {
+		color: theme-color('primary');
+	}
+}
+
+@media only screen and (max-width:767px) {
+	footer {
+		text-align: center;
+		font-size: 0.75rem;
+		span {
+			display: block;
+		}
+	}
+}

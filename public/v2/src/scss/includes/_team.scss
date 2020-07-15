@@ -1,0 +1,82 @@
+
+// Team Page
+
+.user-card {
+	background: $gray-100;
+	box-shadow: 0 1px 2px -1px rgba(0,0,0,0.12), 0 2px 8px 0 rgba(0,0,0,0.06);
+	border-radius: 4px;
+	padding: 0rem;
+	margin-bottom: 0.75rem;
+	margin-top: 0.5rem;
+	color: theme-color('dark');
+	position: relative;
+	.table-box-check {
+		.custom-checkbox {
+			margin-top: 4px;
+			height: 1rem;
+		}
+	}
+	.card-pane {
+		padding: 1rem 1rem 1rem;
+		box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10);
+	}
+	.card-collapse {
+		margin-top: -0.75rem;
+	}
+	.dropdown-toggle::after {
+		display: none;
+	}
+	&.user-connected {
+		.card-pane {
+			&:before {
+				background: theme-color('success');
+			}
+		}
+	}
+	&.user-disconnected {
+		.card-pane {
+			&:before {
+				background: theme-color('danger');
+			}
+		}
+	}
+}
+
+.user-info {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	.user-avatar {
+		flex: 0 0 2rem;
+		height: 2rem;
+		width: 2rem;
+		margin-right: 0.5rem;
+	}
+	.user-name  {
+		white-space: none;
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		.badge {
+			margin-left: 0.25rem;
+		}
+	}
+	
+}
+
+@media only screen and (max-width: 992px) {
+	.xs-aligned {
+		padding-left: 4rem !important;
+	}
+}
+
+
+.user-image {
+	border-radius: 4px;
+	overflow: hidden;
+	max-width: 10rem;
+	margin:0 auto 0.5rem;
+	img {
+		width: 100%;
+	}
+}

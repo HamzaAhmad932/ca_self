@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: chargeautomation-service
+spec:
+  selector:
+    app: chargeautomation
+    component: full-stack-application
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

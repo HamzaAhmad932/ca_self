@@ -1,0 +1,102 @@
+extends _main4.pug
+
+block title
+	| Pre-Check-In - Basic Info
+	
+block style	
+
+block content
+	// Chat
+	+chat
+			
+
+	.guest-portal
+		+gp-header
+			
+		//Guest Portal
+		.gp-page.gp-min
+			.gp-title.mb-2
+				.language-select.dropdown.dropdown-sm
+					button#dropdownMenuButton.btn.btn-sm.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						span.flag-emoji 🇬🇧
+						|  English
+					.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton')
+						a.dropdown-item(href='#')
+							span.flag-emoji 🇫🇷
+							|  French
+						a.dropdown-item(href='#')
+							span.flag-emoji 🇪🇸
+							|  Spanish
+				h1.page-title Pre-Check-In
+
+			.gp-box
+				.gp-box-steps.gp-progress
+					a.gp-step.active(href='pre-checkin-02.html') 1.
+						span Basic Info
+						span.step-check
+							i.fas.fa-check
+					a.gp-step(href='pre-checkin-03.html') 2.
+						span Arrival
+						span.step-check
+							i.fas.fa-check
+					a.gp-step(href='pre-checkin-04.html') 3.
+						span Verification
+						span.step-check
+							i.fas.fa-check
+					a.gp-step(href='pre-checkin-05.html') 4.
+						span Credit Card
+						span.step-check
+							i.fas.fa-check
+
+				.gp-box-content
+					.gp-inset
+						form
+							.form-section-title
+								h4 Contact info
+							.form-group
+								label(for='guestName') Full Name
+								input.form-control#guestName(type='text' value='Olga Richards')
+							.form-group
+								label(for='guestEmail') Primary Email Address
+								input.form-control#guestEmail(type='email' value='elenor.ernser@beverly.name' aria-describedby='emailHelp')
+								small#emailHelp.form-text.text-muted This email address will be used to send you property access info
+							.form-group
+								label(for='guestPhone') Phone Number
+								.input-group
+									select.custom-select.bg-light
+										option(selected) 🇫🇷 +33
+										option 🇺🇸 +1
+										option 🇬🇧 +44
+									input#guestPhone.form-control(type='text' value='620-521-0340')
+							.form-section-title
+								h4 Guests
+									span.badge.badge-info 4
+									
+							.form-group
+								label(for='guestAdults') Adults
+								.input-group
+									.input-group-prepend
+										button.btn.btn-secondary(type='button')
+											i.fas.fa-minus
+									input#guestAdults.form-control.text-center(type='number' value='2')
+									.input-group-append
+										button.btn.btn-secondary(type='button')
+											i.fas.fa-plus
+							
+							.form-group
+								label(for='guestChildren') Children (2-17 yo)
+								.input-group
+									.input-group-prepend
+										button.btn.btn-secondary(type='button')
+											i.fas.fa-minus
+									input#guestChildren.form-control.text-center(type='number' value='1')
+									.input-group-append
+										button.btn.btn-secondary(type='button')
+											i.fas.fa-plus
+
+			.gp-divider
+	.gp-footer
+		a.btn.btn-secondary.btn-back(href='pre-checkin-01.html')
+			i.fas.fa-arrow-left
+		a.btn.btn-success.btn-confirm(href='pre-checkin-03.html') Save & Continue  
+			i.fas.fa-arrow-right

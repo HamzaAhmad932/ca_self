@@ -1,0 +1,102 @@
+extends _main.pug
+
+block title
+	| Dashboard
+	
+block style
+	link(rel='stylesheet', href='css/chartist.css')
+	
+block header
+	+header
+		a.nav-item.nav-link.active(href='index.html')
+			i.fas.fa-chart-pie 
+			|  Dashboard 
+			span.sr-only (current)
+		a.nav-item.nav-link(href='properties.html') 
+			i.fas.fa-list
+			|  Properties
+		a.nav-item.nav-link(href='bookings.html') 
+			i.fas.fa-calendar-check 
+			|  Bookings
+		a.nav-item.nav-link(href='team.html') 
+			i.fas.fa-users 
+			|  Team
+		a.nav-item.nav-link(href='#') 
+			i.fas.fa-cog 
+			|  Settings
+
+block content
+	
+	.page-header.has-border-bottom.mb-4
+		h1.page-title Welcome, Carl
+		.page-header-legend
+			.page-header-legend-item
+				div
+					h5 Properties
+					span 4 Booking Sources
+				.legend-value 46
+				+box-link
+			.page-header-legend-item
+				div
+					h5 Sales
+					span Last Month
+				.legend-value.text-success $29,244
+				+box-link
+		
+	.page-body
+		.content-box
+			.content-box-header
+				h2.box-title Sales Over Transactions
+				a.viewmore-link(href='#0') 
+					span.d-none.d-sm-inline.d-md-inlin.d-lg-inline  Full Report 
+					|  →
+			.content-box-body
+				+report-widget
+		
+		.row
+			.col-md-12.col-lg-6
+				+recent-bookings
+								
+			.col-md-12.col-lg-6
+				+hot-checkins
+				
+block scripts
+	
+	// Chartist.js
+	script(src='js/chartist.min.js')
+	script(src='js/chartist-plugin-tooltip.js')
+		
+	script.
+		var chart = new Chartist.Line('.ct-chart', {
+			labels: ['Jun 6', 'Jun 7', 'Jun 8', 'Jun 9', 'Jun 10', 'Jun 11', 'Jun 12'],
+			series: [
+				[{meta: 'Bookings', value: 76}, 
+					{meta: 'Bookings', value: 55},
+					{meta: 'Bookings', value: 41},
+					{meta: 'Bookings', value: 10},
+					{meta: 'Bookings', value: 34},
+					{meta: 'Bookings', value: 91},
+					{meta: 'Bookings', value: 85}
+					]
+			]
+		}, {
+			lineSmooth: Chartist.Interpolation.simple({
+				divisor: 2
+			}),
+			fullWidth: false,
+			low: 0,
+			chartPadding: {
+				right: 0
+			},
+		});
+		
+	script.
+		new Chartist.Pie('.ct-pie-chart', {
+			series: [20, 10, 30, 40]
+				}, {
+					donut: true,
+					donutWidth: 20,
+					donutSolid: true,
+					startAngle: 270,
+					showLabel: true
+				});

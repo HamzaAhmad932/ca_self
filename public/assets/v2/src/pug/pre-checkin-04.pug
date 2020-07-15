@@ -1,0 +1,70 @@
+extends _main4.pug
+
+block title
+	| Pre-Check-In - Verification
+	
+block style	
+
+block content
+	// Chat
+	+chat
+			
+
+	.guest-portal
+		+gp-header
+			
+		//Guest Portal
+		.gp-page.gp-min
+			.gp-title.mb-2
+				.language-select.dropdown.dropdown-sm
+					button#dropdownMenuButton.btn.btn-sm.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						span.flag-emoji 🇬🇧
+						|  English
+					.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton')
+						a.dropdown-item(href='#')
+							span.flag-emoji 🇫🇷
+							|  French
+						a.dropdown-item(href='#')
+							span.flag-emoji 🇪🇸
+							|  Spanish
+				h1.page-title Pre-Check-In
+
+			.gp-box
+				.gp-box-steps.gp-progress
+					a.gp-step.step-completed(href='pre-checkin-02.html') 1.
+						span Basic Info
+						span.step-check
+							i.fas.fa-check
+					a.gp-step.step-completed(href='pre-checkin-03.html') 2.
+						span Arrival
+						span.step-check
+							i.fas.fa-check
+					a.gp-step.active(href='pre-checkin-04.html') 3.
+						span Verification
+						span.step-check
+							i.fas.fa-check
+					a.gp-step(href='pre-checkin-05.html') 4.
+						span Credit Card
+						span.step-check
+							i.fas.fa-check
+
+				.gp-box-content
+					.gp-inset
+						form
+							.form-group
+								label.mb-0(for='uploadFile') Upload a government issued document:
+								small.form-text.text-muted.mb-2 Passport, ID or Driver License
+								.custom-file
+									input#uploadFile.custom-file-input(type='file')
+									label.custom-file-label(for='customFile') Choose file
+									small.form-text.text-muted.mb-2 Max file size: 5MB (JPG or PNG)
+
+									
+									
+									
+			.gp-divider
+	.gp-footer
+		a.btn.btn-secondary.btn-back(href='pre-checkin-03.html')
+			i.fas.fa-arrow-left
+		a.btn.btn-success.btn-confirm(href='pre-checkin-05.html') Save & Continue  
+			i.fas.fa-arrow-right

@@ -1,0 +1,1 @@
+<span>{{ $email }}<br>{{ $contact_number }}</span>

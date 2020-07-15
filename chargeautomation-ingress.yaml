@@ -1,0 +1,10 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: chargeautomation-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: "ca-web-static-ip"
+spec:
+  backend:
+    serviceName: chargeautomation-service
+    servicePort: 80

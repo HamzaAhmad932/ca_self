@@ -1,0 +1,94 @@
+<OTA_HotelResNotifRQ xmlns="http://www.opentravel.org/OTA/2003/05" EchoToken="d7e9a792-263e-5959-9fd3-515124cf263a" TimeStamp="2020-05-21T05:08:45Z" Version="1.0">
+  <HotelReservations>
+    <HotelReservation CreateDateTime="2020-05-21T05:08:45Z" LastModifyDateTime="2020-05-21T05:08:45Z" ResStatus="Reserved">
+      <POS>
+        <Source>
+          <RequestorID ID="littlehotelier"/>
+        </Source>
+        <Source>
+          <BookingChannel Type="4" Primary="true">
+            <CompanyName>Direct</CompanyName>
+          </BookingChannel>
+        </Source>
+      </POS>
+      <UniqueID ID="LH2005215269889"/>
+      <RoomStays>
+        <RoomStay>
+          <RoomTypes>
+            <RoomType RoomID="Room 1" RoomType="Double Room" RoomTypeCode="27144">
+              <RoomDescription>
+                <Text>Double Room</Text>
+              </RoomDescription>
+            </RoomType>
+          </RoomTypes>
+          <RatePlans>
+            <RatePlan RatePlanName="Double Room Standard" RatePlanCode="59293" EffectiveDate="2020-05-21" ExpireDate="2020-05-22">
+              <RatePlanDescription>
+                <Text>Double Room Standard</Text>
+              </RatePlanDescription>
+            </RatePlan>
+          </RatePlans>
+          <RoomRates>
+            <RoomRate EffectiveDate="2020-05-21" ExpireDate="2020-05-22" RoomTypeCode="27144" RatePlanCode="59293" RoomID="Room 1" NumberOfUnits="1">
+              <Rates>
+                <Rate UnitMultiplier="1" EffectiveDate="2020-05-21" ExpireDate="2020-05-22">
+                  <Base AmountAfterTax="150" CurrencyCode="SGD"/>
+                </Rate>
+              </Rates>
+            </RoomRate>
+          </RoomRates>
+          <GuestCounts>
+            <GuestCount AgeQualifyingCode="7" Count="1"/>
+            <GuestCount AgeQualifyingCode="8" Count="2"/>
+            <GuestCount AgeQualifyingCode="10" Count="1"/>
+          </GuestCounts>
+          <TimeSpan Start="2020-05-21" End="2020-05-22"/>
+          <Total CurrencyCode="SGD" AmountAfterTax="175"/>
+        </RoomStay>
+      </RoomStays>
+      <ResGuests>
+        <ResGuest ResGuestRPH="1">
+          <Profiles>
+            <ProfileInfo>
+              <Profile ProfileType="1">
+                <Customer VIP_Indicator="false">
+                  <PersonName>
+                    <GivenName>Muhammad</GivenName>
+                    <Surname>Ammar</Surname>
+                  </PersonName>
+                  <Telephone PhoneTechType="1" PhoneNumber="923002438120"/>
+                  <Email EmailType="1">mr.dummydevil@gmail.com</Email>
+                  <Address Type="1">
+                    <AddressLine>Address Line 1.Address Line 2</AddressLine>
+                    <CityName>fsd</CityName>
+                    <PostalCode>38000</PostalCode>
+                    <StateProv>punjab</StateProv>
+                    <CountryName>Pakistan</CountryName>
+                  </Address>
+                </Customer>
+                <CompanyInfo>
+                  <CompanyName>CA</CompanyName>
+                </CompanyInfo>
+              </Profile>
+            </ProfileInfo>
+          </Profiles>
+          <Comments>
+            <Comment GuestViewable="true">
+              <Text>Just Testing how to make booking on little hoteler.</Text>
+            </Comment>
+          </Comments>
+        </ResGuest>
+      </ResGuests>
+      <ResGlobalInfo>
+        <TimeSpan End="2020-05-22" Start="2020-05-21"/>
+        <Total AmountAfterTax="175" CurrencyCode="SGD">
+          <Taxes CurrencyCode="SGD" Amount="0.000000"/>
+        </Total>
+        <HotelReservationIDs>
+          <HotelReservationID ResID_Type="10" ResID_Source="PMS" ResID_Value="LH2005215269889"/>
+        </HotelReservationIDs>
+        <BasicPropertyInfo HotelCode="CHR0001"/>
+      </ResGlobalInfo>
+    </HotelReservation>
+  </HotelReservations>
+</OTA_HotelResNotifRQ>

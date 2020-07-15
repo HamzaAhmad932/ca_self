@@ -1,0 +1,74 @@
+extends _main3.pug
+
+block title
+	| Pre-Check-In - Your Booking Details
+	
+block style	
+
+block content
+	// Chat
+	+chat
+			
+
+	.guest-portal
+		+gp-header
+			
+		//Guest Portal
+		.gp-page
+			.gp-title
+				.language-select.dropdown.dropdown-sm
+					button#dropdownMenuButton.btn.btn-sm.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						span.flag-emoji 🇬🇧
+						|  English
+					.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton')
+						a.dropdown-item(href='#')
+							span.flag-emoji 🇫🇷
+							|  French
+						a.dropdown-item(href='#')
+							span.flag-emoji 🇪🇸
+							|  Spanish
+				h1.page-title Welcome Olga
+				p.text-muted Please fill out pre-check-in form
+
+
+			.gp-box
+				.gp-box-steps
+					.gp-property
+						.gp-property-img
+							img(src='img/property.png' alt='')
+						.gp-property-legend
+							p.mb-0 Apartment with Sea View at walking 5mins from MyKhe Beach
+							.gp-property-dl.small
+								img(src='img/airbnb-logo.png' alt='')
+								span Booked with AirBNB
+								a.ml-auto(href='#' target='_blank')
+									span View online 
+									i.fas.fa-external-link-alt
+
+				.gp-box-content
+					.gp-inset
+						.row
+							.col
+								dl.gp-dl
+									dt Reference:
+									dd KT_859298
+								dl.gp-dl
+									dt Check-in date:
+									dd Jun 3, 2019
+								dl.gp-dl
+									dt Arrival time:
+									dd 2:00 pm
+							.col
+								dl.gp-dl
+									dt Amount:
+									dd $5,200
+								dl.gp-dl
+									dt Check-out date:
+									dd Jun 9, 2019
+								dl.gp-dl
+									dt Guests:
+									dd 3 (1 child)
+
+			.gp-divider
+	.gp-footer
+		a.btn.btn-success.btn-confirm(href='pre-checkin-02.html') Get Started

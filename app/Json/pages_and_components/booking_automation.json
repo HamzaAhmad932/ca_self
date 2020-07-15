@@ -1,0 +1,34 @@
+{
+  "client": {
+    "pms-setup-step5" : {"name": "ba-pms-setup-step5"},
+    "dashboard-page": {"name": "ba-dashboard"},
+    "booking-list-page": {"name": "ba-booking-list-page"},
+    "booking-detail-page": {"name": "booking-detail-page"},
+    "property-list-page": {"name": "ba-client-properties-list"},
+    "upsell-list-page": {"name": "upsell-list-page"},
+    "upsell-add-page": {"name": "add-upsell"},
+    "upsell-type-list-page": {"name": "upsell-types-list-page"},
+    "upsell-type-add-page": {"name": "upsell-types-add"},
+    "upsell-order-list-page": {"name": "upsell-order-list-page"},
+    "terms-and-conditions-list-page": {"name": "terms-and-conditions-list-page"},
+    "terms-and-conditions-add-page": {"name": "terms-and-conditions-add"},
+    "guide-book-list-page": {"name": "guide-books-list-page"},
+    "guide-book-add-page": {"name": "guide-books-add"},
+    "guide-book-type-list-page": {"name": "guide-books-types-list-page"},
+    "guide-book-type-add-page": {"name": "guide-books-types-add"},
+    "online-checkin-page": {"name": "general-settings"},
+    "preferences-page": {"name": "ba-preference-settings"}
+  },
+  "guest": {
+    "pre-checkin-page": {"name": "guest-pre-checkin"},
+    "pre-checkin-basic-info-page": {"name": "basic-info-step"},
+    "pre-checkin-arrival-info-page": {"name": "arrival-info-step"},
+    "pre-checkin-verification-page": {"name": "verification-step"},
+    "pre-checkin-credit-card-page": {"name": "credit-card-step"},
+    "pre-checkin-add-on-services-page": {"name": "add-on-services"},
+    "pre-checkin-photo-booth-page": {"name": "photo-booth"},
+    "pre-checkin-summary-page": {"name": "summary-step"},
+    "pre-checkin-thank-you-page": {"name": "pre-checkin-thank-you"},
+    "guest-portal-page": {"name": "guest-portal"}
+  }
+}

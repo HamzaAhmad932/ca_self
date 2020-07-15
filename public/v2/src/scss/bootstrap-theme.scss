@@ -1,0 +1,173 @@
+@import "includes/var";
+
+$link-hover-decoration: none;
+$grid-gutter-width: 24px;
+$input-btn-focus-width: 0;
+
+@import "bootstrap/bootstrap";
+
+
+
+.custom-select {
+	-webkit-appearance: none;
+}
+
+.badge {
+	font-size: 0.75rem;
+	line-height: 1rem;
+	font-weight: 500;
+	padding: 2px 8px;
+	border-radius: 2px;
+}
+.badge, .btn {
+	 -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.small {
+	font-size: 0.75rem;
+}
+
+.text-muted {
+	color: $gray-700 !important;
+}
+
+.text-warning {
+	color: #A27C1A !important;
+}
+
+.badge-danger {
+	background: #FEE8E8;
+	color: #DE0102;
+}
+
+.badge-success {
+	background: #E3F9E5;
+	color: #18981D;
+}
+
+.badge-warning {
+	background: #F9DA8B;
+	color: #7C5E10;
+}
+
+.badge-info {
+	background: #B6E0FE;
+	color: #0F609B;
+}
+
+
+.btn-outline-secondary {
+	border: 1px solid $gray-400;
+}
+
+.btn-success {
+	border: 1px solid rgba(0,0,0,0.1);
+	box-shadow: 0 1px 2px -1px rgba(0,0,0,0.06), 0 2px 4px -2px rgba(0,0,0,0.12);
+}
+
+.btn-secondary {
+	background: $gray-200;
+	border: 1px solid $gray-300;
+	box-shadow: 0 1px 2px -1px rgba(0,0,0,0.06), 0 2px 4px -2px rgba(0,0,0,0.12);
+	border-radius: 3px;
+	color: $gray-800;
+}
+
+.custom-select {
+	color: theme-color('dark');
+}
+
+.form-group {
+	.form-check {
+		label {
+			font-weight: 300;
+		}
+	}
+	.form-check-label {
+		font-weight: 300;
+	}
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.form-label-sm {
+	font-size: 0.875rem;
+	font-weight: 500;
+	margin-bottom: 0.24rem;
+}
+
+h4 {
+	font-size: 1.125rem;
+}
+
+h5, .h5 {
+	font-size: 1rem;
+}
+
+h6, .h6 {
+	font-size: 0.875rem;
+	margin-bottom: 0.25rem;
+}
+
+.modal-content {
+	font-size: 0.875rem;
+	border: none;
+}
+
+.modal.fade {
+	background: rgba(0,0,0,0.8);
+}
+
+.btn, a, button {
+	outline: none !important;
+}
+
+.modal-header {
+	border: none;
+	background: $gray-100;
+	padding: 1rem 1rem 0.75rem;
+	.close {
+		opacity: 1;
+		span {
+			background: $gray-200;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 1.5rem;
+			height: 1.5rem;
+			border-radius: 1rem;
+			line-height: 1;
+			color: $gray-700;
+			font-size: 0.75rem;
+			text-shadow: none;
+			.fas {
+				margin-top: 1px;
+			}
+		}
+	}
+}
+
+.modal-footer {
+	background: $gray-100;
+	box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.10);
+	border: none;
+}
+
+.modal-title {
+	line-height: 1.5rem;
+}
+.modal-lg, .modal-xl {
+	max-width: 960px;
+}

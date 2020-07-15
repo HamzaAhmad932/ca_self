@@ -1,0 +1,218 @@
+.notification-sidebar {
+	overflow: hidden;
+	z-index: 2;
+}
+
+.notification-list {
+	padding-top: 6rem;
+	overflow-y: scroll;
+	margin-right: -1rem;
+	height: 100%;
+	padding-right: 1rem;
+	padding-bottom: 2rem;
+}
+
+@media only screen and (max-width:767px) {
+	.notification-list {
+		padding-top: 5rem;
+	}
+}
+
+
+
+.notification-widget {
+	padding: 1rem 0;
+	&:not(:last-child) {
+		border-bottom: 1px solid $gray-300;
+		margin-bottom: 1rem;
+	}
+	.widget-body {
+		padding: 0.5rem 1.25rem;
+	}
+	.widget-header {
+		padding: 0 1.25rem;
+		position: relative;
+		user-select: none;
+		a.readmore {
+			color: $gray-700;
+			font-size: 0.75rem;
+			font-weight: 500;
+			position: absolute;
+			right: 1.25rem;
+			top: 0.25rem;
+			
+		}
+		h4 {
+			font-size: 1rem;
+			font-weight: 500;
+			line-height: 1.5;
+		}
+		&::before {
+			border-radius: 0 1rem 1rem 0;
+			content: '';
+			left: 0;
+			height: 1.5rem;
+			position: absolute;
+			top: 0;
+			width: 4px;
+		}
+		&.danger::before {
+			background: theme-color('danger');
+		}
+		&.warning::before {
+			background: theme-color('warning');
+		}
+	}
+}
+
+.notification-item {
+	background: #FFFFFF;
+	box-shadow: $shadow;
+	border-radius: 4px;
+	padding: 0.625rem 1rem 0.625rem 2.25rem;
+	color: $gray-700;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	position: relative;
+	transition: $transition;
+	&:not(:last-child) {
+		margin-bottom: 0.5rem;
+	}
+	&:hover {
+		box-shadow: $shadow-hover;
+	}
+	&:active {
+		background: $gray-100;
+		box-shadow: $shadow-active;
+	}
+	&::before {
+		border-radius: 0 1rem 1rem 0;
+		content: '';
+		left: 0px;
+		position: absolute;
+		top: 4px;
+		bottom: 4px;
+		width: 4px;
+	}
+	h5 {
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 1.25rem;
+		margin-bottom: 0.125rem;
+	}
+	.notification-time {
+		font-size: 0.625rem;
+		position: absolute;
+		right: 1rem;
+		top: 0.75rem;
+	}
+	.notification-icon {
+		position: absolute;
+		left: 1rem;
+		top: 0.825rem;
+	}
+	&.danger {
+		&::before {
+			background: theme-color('danger');
+		}
+		.notification-icon {
+			color: theme-color('danger');
+		}
+		h5 {
+			color: theme-color('danger');
+		}
+	}
+	
+	&.success {
+		&::before {
+			background: theme-color('success');
+		}
+		.notification-icon {
+			color: theme-color('success');
+		}
+		h5 {
+			color: theme-color('success');
+		}
+	}
+	
+	&.warning {
+		&::before {
+			background: theme-color('warning');
+		}
+		.notification-icon {
+			color: darken(theme-color('warning'), 20%);
+		}
+		h5 {
+			color: darken(theme-color('warning'), 20%);
+		}
+	}
+}
+
+
+.overlay-link { 
+	bottom: 0;
+	cursor: pointer;
+	display: block;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.timeline {
+	font-size: 0.75rem;
+	line-height: 1rem;
+}
+
+.timeline-item {
+	display: flex;
+	position: relative;
+	margin-bottom: 1rem;
+	&:not(:last-child)::after {
+		content: '';
+		width: 1px;
+		height: 0.5rem;
+		background: $gray-300;
+		position: absolute;
+		left: 1rem;
+		bottom: -0.75rem;
+	}
+	.timeline-icon {
+		align-items: center;
+		background: #fff;
+		border-radius: 1rem;
+		box-shadow: 0 1px 2px -1px rgba(0,0,0,0.12), 0 2px 8px 0 rgba(0,0,0,0.06);
+		display: flex;
+		flex: 0 0 2rem;
+		height: 2rem;
+		justify-content: center;
+		width: 2rem;
+	}
+	.timeline-item-content {
+		color: $gray-800;
+		padding-left: 0.5rem;
+	}
+	.timeline-time {
+		font-size: 0.625rem;
+	}
+	&:hover {
+		.timeline-item-content {
+			color: theme-color('dark');
+		}
+	}
+	&.success {
+		.timeline-icon {
+			color: theme-color('success');
+		}
+	}
+	&.danger {
+		.timeline-icon {
+			color: theme-color('danger');
+		}
+	}
+	&.warning {
+		.timeline-icon {
+			color: darken(theme-color('warning'), 20%);
+		}
+	}
+}

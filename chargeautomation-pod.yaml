@@ -1,0 +1,63 @@
+# Copyright 2015 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License
+
+# This file configures the bookshelf task worker. The worker is responsible
+# for processing book requests and updating book information.
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: caworker
+  # labels:
+  #   app: ca-full-stack
+# The bookshelf worker replica set ensures that at least 2 instances of the
+# bookshelf worker pod are running on the cluster.
+# For more info about Pods see:
+#   https://cloud.google.com/container-engine/docs/pods/
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: chargeautomation
+        component: full-stack-application
+    spec:
+      containers:
+      - name: laravelweb
+        # Replace $GCLOUD_PROJECT with your project ID or use `make template`.
+        image: gcr.io/booking-auto-1/laravelweb
+        # This setting makes nodes pull the docker image every time before
+        # starting the pod. This is useful when debugging, but should be turned
+        # off in production.
+        imagePullPolicy: Always
+        # The bookshelf process listens on port 8080 for web traffic by default.
+        ports:
+        - protocol: TCP
+          containerPort: 80
+      - name: camysql
+          image: gcr.io/booking-auto-1/ca_mysql
+          # define environment variables
+          env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: "my-secret-pw"
+          - name: MYSQL_DATABASE
+            value: "ca2db"
+          - name: MYSQL_USER
+            value: "appuser"
+          - name: MYSQL_PASSWORD
+            value: "mypass"
+          # The mysql process listens on port 3306 for web traffic by default.
+          ports:
+          - protocol: TCP
+            containerPort: 3306

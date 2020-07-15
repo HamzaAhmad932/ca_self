@@ -1,0 +1,32 @@
+{
+  "client": {
+    "dashboard": {"name": null},
+    "bookings": {"name": null},
+    "booking-details": {"name": null},
+    "properties": {"name": null},
+    "manage-upsells": {"name": null},
+    "add-upsells": {"name": null},
+    "add-upsell-types": {"name": null},
+    "view-upsell-orders": {"name": null},
+    "upsell-types": {"name": null},
+    "manage-terms-and-conditions": {"name": null},
+    "add-terms-and-conditions": {"name": null},
+    "view-guide-books": {"name": null},
+    "add-guide-book": {"name": null},
+    "add-guide-book-type": {"name": null},
+    "view-guide-book-types": {"name": null},
+    "online-checkin": {"name": null},
+    "preferences": {"name": null}
+  },
+  "guest": {
+    "pre-checkin-guest": {"name": null},
+    "pre-checkin-basic-info-step": {"name": null},
+    "pre-checkin-arrival-info-step": {"name": null},
+    "pre-checkin-verification-step": {"name": null},
+    "pre-checkin-credit-card-step": {"name": null},
+    "pre-checkin-add-on-services": {"name": null},
+    "pre-checkin-summary-step": {"name": null},
+    "pre-checkin-pre-checkin-thank-you": {"name": null},
+    "guest-portal": {"name": null}
+  }
+}
